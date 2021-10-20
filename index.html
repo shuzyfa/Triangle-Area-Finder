@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que 3</title>
+</head>
+<body>
+    <h2>Area of triangle</h2><br>
+    <input type="number" name="side 1" id="side1" placeholder="Side 1">
+    <input type="number" name="side 2" id="side2" placeholder="Side 2">
+    <input type="number" name="side 3" id="side3" placeholder="Side 3">
+    <button onclick="areaOftriangle()">Calculate Area</button>
+    <P id="area"></P>
+    <script>
+        function areaOftriangle(){
+           let s1=document.getElementById("side1").value;
+           let s2=document.getElementById("side2").value;
+           let s3=document.getElementById("side3").value;
+
+           //s = (a + b + c)/2 
+           //A= √[s(s-a)(s-b)(s-c)]
+
+           let S= (Number(s1)+Number(s2)+Number(s3)/2)
+           let Area= Math.sqrt((Number(S)*((Number(S)-Number(s1))*(Number(S)-Number(s2))*(Number(S)-Number(s3)))));
+          document.getElementById("area").innerHTML= Area;
+
+
+        }
+
+    </script>
+</body>
+</html>
